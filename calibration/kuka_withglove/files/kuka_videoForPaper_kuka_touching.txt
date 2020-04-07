@@ -1,0 +1,4 @@
+videoForPaper/kuka_touching/kuka.hdf5
+videoForPaper/kuka_touching/kuka_pic1.hdf5
+videoForPaper/kuka_touching/kuka_pic-2.hdf5
+videoForPaper/kuka_touching/kuka_pic-3.hdf5

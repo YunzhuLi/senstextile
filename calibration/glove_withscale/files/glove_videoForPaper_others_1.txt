@@ -1,0 +1,3 @@
+videoForPaper/glove_26obj/calculator.hdf5
+videoForPaper/glove_26obj/chain.hdf5
+videoForPaper/glove_26obj/mug.hdf5

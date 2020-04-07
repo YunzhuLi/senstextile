@@ -1,0 +1,8 @@
+videoForPaper/sock_data_updated/downstairs1/touch_left.hdf5
+videoForPaper/sock_data_updated/downstairs2/touch_left.hdf5
+videoForPaper/sock_data_updated/task2/touch_left.hdf5
+videoForPaper/sock_data_updated/task1/touch_left.hdf5
+videoForPaper/sock_data_updated/upstairs2/touch_left.hdf5
+videoForPaper/sock_data_updated/upstairs1/touch_left.hdf5
+videoForPaper/sock_data_updated/walking2/touch_left.hdf5
+videoForPaper/sock_data_updated/walking1/touch_left.hdf5

@@ -1,0 +1,1 @@
+videoForPaper/kuka_calibration/kuka_cal/touch_0.hdf5

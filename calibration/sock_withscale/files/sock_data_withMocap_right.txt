@@ -1,0 +1,15 @@
+sock_withMocap/moredata_oldsock/3/touch_left.hdf5
+sock_withMocap/moredata_oldsock/upperbody/upper_3/touch_left.hdf5
+sock_withMocap/moredata_oldsock/upperbody/upper_1/touch_left.hdf5
+sock_withMocap/moredata_oldsock/upperbody/upper_5/touch_left.hdf5
+sock_withMocap/moredata_oldsock/upperbody/upper_4/touch_left.hdf5
+sock_withMocap/moredata_oldsock/upperbody/upper_2/touch_left.hdf5
+sock_withMocap/moredata_oldsock/upperbody/upper_6/touch_left.hdf5
+sock_withMocap/moredata_oldsock/4_part/touch_left.hdf5
+sock_withMocap/moredata_oldsock/2/touch_left.hdf5
+sock_withMocap/moredata_oldsock/9/touch_left.hdf5
+sock_withMocap/moredata_oldsock/8/touch_left.hdf5
+sock_withMocap/moredata_oldsock/1/touch_left.hdf5
+sock_withMocap/moredata_oldsock/5/touch_left.hdf5
+sock_withMocap/moredata_oldsock/6/touch_left.hdf5
+sock_withMocap/moredata_oldsock/7/touch_left.hdf5

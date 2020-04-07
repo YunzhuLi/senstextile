@@ -1,0 +1,2 @@
+videoForPaper/sock_calibration/sock_cal_updated/touch1.hdf5
+videoForPaper/sock_calibration/sock_cal/touch1.hdf5

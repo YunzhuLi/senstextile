@@ -1,0 +1,3 @@
+glove_calibration_randompressing_withvision/rec_2019-12-06_17-33-09/touch.hdf5
+glove_calibration_randompressing_withvision/rec_2019-12-17_18-01-29/touch.hdf5
+glove_calibration_randompressing_withvision/rec_2019-12-17_18-40-25/touch.hdf5

@@ -1,0 +1,1 @@
+sock_calibration_withscale/sock_calibration_left/Touch_COM10.hdf5

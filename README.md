@@ -6,6 +6,9 @@ This is a Pytorch-based code for self-supervised sensing correction, classificat
 
 ## Code organization
 
+Our code is consists of three sub-sections and organized as the following.
+
+### Self-supervised sensing correction
 ```
 calibration
 |--glove_withscale
@@ -23,7 +26,10 @@ calibration
 |--models.py
 |--utils.py
 |--visualizer.py
+```
 
+### Classification
+```
 classification
 |--letter_classification
 |    |--scripts
@@ -40,3 +46,6 @@ classification
 |--models.py
 |--utils.py
 ```
+
+### Mocap prediction
+

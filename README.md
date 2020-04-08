@@ -47,5 +47,26 @@ classification
 |--utils.py
 ```
 
-### Mocap prediction
+### Pose Prediction
+```
+Pose Prediction
+|--smpl
+|    |--verts.py
+|    |--serialization.py
+|    |--render_smpl.py
+|    |--posemapper.py
+|    |--lbs.py
+|    |--models
+|--chkpts
+|    |-model_in_paper
+|    |    |--checkpoint.pth.tar
+|--train.py
+|--models.py
+|--dataloader.py
+|--data_preprocessing.py
+|--test_visualize.py
+|--utils
+|    |--rotation_matrix.py
+|    |--transformations.py
+```
 

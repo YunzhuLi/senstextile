@@ -32,11 +32,11 @@ os.mkdir('VISUALIZATION/'+expmtname+'/OUTPUT/')
 os.mkdir('VISUALIZATION/'+expmtname+'/TOGETHER/')
 
 
-gt = pickle.load( open( '/data/vision/torralba/communication/projects/glove/mocap/dataset/test.p', "rb" ) )
+gt = pickle.load( open( 'dataset/test.p', "rb" ) )
 
     
-pred = pickle.load(open('/data/vision/torralba/communication/projects/glove/mocap/results/pred.p',"rb"))
-input_ = pickle.load(open('/data/vision/torralba/communication/projects/glove/mocap/results/input.p',"rb"))
+pred = pickle.load(open('results/preds.p',"rb"))
+input_ = pickle.load(open('results/inputs.p',"rb"))
 
 predictions = np.array(pred)[:,0,:]
 input_passed = np.array(input_)[:,0,:]

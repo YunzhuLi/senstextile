@@ -71,9 +71,9 @@ shape of each sock =[frames,32,32] This is the reading from the sensor of the so
 shape of data from xsens = [frames,22,3] This is the joint angle data
 The data is sampled at the same rate
 '''
-train_path = '/data/vision/torralba/communication/projects/glove/mocap/dataset/jointangles_'+args.type+'_train.p' 
-val_path = '/data/vision/torralba/communication/projects/glove/mocap/dataset/jointangles_'+args.type+'_val.p'
-test_path = '/data/vision/torralba/communication/projects/glove/mocap/dataset/jointangles_'+args.type+'_test.p'
+train_path = 'dataset/train.p' 
+val_path = 'dataset/val.p'
+test_path = 'dataset/test.p'
 
 train_files = pickle.load( open( train_path, "rb" ) )
 val_files = pickle.load( open( val_path, "rb" ) )
@@ -137,8 +137,8 @@ if __name__ == '__main__':
             out = seq(left,right)      
             predictions.append(out.cpu().data.numpy().reshape(xsens.shape) )
             inputs_.append(xsens.cpu().data.numpy().reshape(xsens.shape) )
-        pickle.dump(predictions  , open( "/data/vision/torralba/communication/projects/glove/mocap/results/test_v2_pred_"+args.exp+".p", "wb" ) )
-        pickle.dump(inputs_  , open( "/data/vision/torralba/communication/projects/glove/mocap/results/test_v2_input_"+args.exp+".p", "wb" ) )
+        pickle.dump(predictions  , open( "results/preds.p", "wb" ) )
+        pickle.dump(inputs_  , open( "results/inputs.p", "wb" ) )
     else:
         for epoch in range(args.epoch):
             print('STEP: ', epoch)

@@ -57,9 +57,6 @@ Pose Prediction
 |    |--posemapper.py
 |    |--lbs.py
 |    |--models
-|--chkpts
-|    |-model_in_paper
-|    |    |--checkpoint.pth.tar
 |--train.py
 |--models.py
 |--dataloader.py

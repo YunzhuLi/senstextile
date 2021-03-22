@@ -12,11 +12,48 @@ This is a PyTorch-based implementation for self-supervised sensing correction, c
 
 ## Self-Supervised Sensing Correction
 
-#### Generate demos using pretrained weights
+#### Data and environment preparation
+1. You will need to download the data from the link: [[DropBox]](https://www.dropbox.com/s/vp5q6v85w14844v/data_classification.zip?dl=0) (451.2 MB)
+2. Uncompress the data and place them according to the following structure
+```
+sensing_correction/
+|--data_sensing_correction/
+|    |--vest_calibration/
+|    |--visualization/
+|--glove_withscale/
+...
+```
+3. Setup the environmental variable
+```
+cd sensing_correction
+export PYTHONPATH=${PYTHONPATH}:${PWD}
+```
 
-#### Training
+#### Calibrate the glove using the scale
 
-#### Testing
+
+#### Calibrate the sock using the scale
+
+
+#### Calibrate the vest using a calibrated glove
+
+1. Generate demo visualizations using pretrained models
+```
+cd sensing_correction/vest_withglove
+bash scripts/eval.sh
+```
+Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/vest_withglove/dump_vest_calibration/vis*`.
+
+2. Training the calibration model for the vest using a pretrained calibrated glove
+```
+cd sensing_correction/vest_withglove
+bash scripts/calib.sh
+```
+
+#### Calibrate the kuka sleeve using a calibrated glove
+
+
+
 
 ## Human Pose Estimation
 

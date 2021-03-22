@@ -1,5 +1,5 @@
 # import open3d before torch to avoid conflicts
-from knit_calib.visualization.visualizer import visualizer
+from visualizer import visualizer
 
 import os
 import random
@@ -23,8 +23,8 @@ from torch.utils.data import Dataset, DataLoader
 from config import gen_args
 from data import make_dataset_for_kuka_calibration_withglove_touch_only
 
-from knit_calib.utils.utils import to_np, set_seed, get_lr
-from knit_calib.models.models import CNNCali
+from utils import to_np, set_seed, get_lr
+from models import CNNCali
 
 
 args = gen_args()

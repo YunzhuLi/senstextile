@@ -1,0 +1,4 @@
+kuka_calibration/test/kuka.hdf5
+kuka_calibration/test/kuka_pic1.hdf5
+kuka_calibration/test/kuka_pic-2.hdf5
+kuka_calibration/test/kuka_pic-3.hdf5

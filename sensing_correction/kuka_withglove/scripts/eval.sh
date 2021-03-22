@@ -1,6 +1,6 @@
 CUDA_VISIBLE_DEVICES=0 \
 python eval.py          \
-    --data_path /home/yunzhu/Documents/knit_calib/data \
+    --data_path ../data_sensing_correction/ \
     --knit_name kuka_calibration \
     --superres 1.       \
     --resume 0          \
@@ -13,6 +13,5 @@ python eval.py          \
     --eval 1            \
     --vis 1             \
     --store 0           \
-    --eval_list files/kuka_videoForPaper_kuka_touching.txt \
-    # --eval_list files/kuka_videoForPaper_kuka_cal.txt \
+    --eval_list files/kuka_testing.txt \
 

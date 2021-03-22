@@ -13,4 +13,4 @@ python eval.py          \
     --eval 1            \
     --vis 1             \
     --store 0           \
-    --eval_list files/vest_sittingPosture.txt 
+    --eval_list files/vest_testing.txt 

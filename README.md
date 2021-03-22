@@ -1,8 +1,51 @@
-# Learning human-environment interactions using scalable functional textiles
+# Learning human-environment interactions using conformal tactile textiles
+
+Yiyue Luo, Yunzhu Li, Pratyusha Sharma, Wan Shou, Kui Wu, Michael Foshey, Beichen Li,
+Tomás Palacios, Antonio Torralba, Wojciech Matusik
+
+**Nature Electronics 2021**
+[[website]](http://senstextile.csail.mit.edu/)
 
 ## Introduction
 
-This is a Pytorch-based code for self-supervised sensing correction, classification and mocap prediction in the paper "Learning human-environment interactions using scalable functional textiles".
+This is a PyTorch-based implementation for self-supervised sensing correction, classification and human pose prediction in the paper "Learning human-environment interactions using conformal tactile textiles".
+
+## Self-Supervised Sensing Correction
+
+#### Generate demos using pretrained weights
+
+#### Training
+
+#### Testing
+
+## Human Pose Estimation
+
+#### Generate demos using pretrained weights
+
+#### Training
+
+#### Testing
+
+## Classification
+
+1. You will need to download the data from the link: [[DropBox]] (xx GB)
+2. Uncompress the data and place them according to the following structure
+```
+classification/
+|--data/
+|    |--glove_objclaassification_26obj/
+|    |--sock_classification/
+|    |--vest_classification/
+|    |--vest_letter/
+```
+Sock classification
+```
+cd classification/sock_classification
+bash scripts/train.sh
+```
+
+
+
 
 ## Code organization
 
@@ -57,6 +100,9 @@ Pose Prediction
 |    |--posemapper.py
 |    |--lbs.py
 |    |--models
+|--chkpts
+|    |-model_in_paper
+|    |    |--checkpoint.pth.tar
 |--train.py
 |--models.py
 |--dataloader.py
@@ -67,4 +113,3 @@ Pose Prediction
 |    |--transformations.py
 ```
 
-Trained models, preprocessed datasets and results can be found [[here]](https://www.dropbox.com/sh/3teys3myb4owlub/AAAXgPYibbi57t9v9Ha4mN1ha?dl=0)

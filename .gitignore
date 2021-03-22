@@ -9,6 +9,6 @@ __pycache__
 *dump*
 
 classification/data*/
-calibration/data/
+sensing_correction/data*/
 
 

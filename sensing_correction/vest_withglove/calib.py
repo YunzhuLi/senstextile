@@ -25,8 +25,8 @@ from sklearn.linear_model import LinearRegression
 from config import gen_args
 from data import KnittedVestDataset
 
-from knit_calib.utils.utils import to_np, set_seed, get_lr
-from knit_calib.models.models import CNNCali
+from utils import to_np, set_seed, get_lr
+from models import CNNCali
 
 
 args = gen_args()

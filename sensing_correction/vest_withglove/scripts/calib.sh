@@ -1,6 +1,6 @@
 CUDA_VISIBLE_DEVICES=0	\
 python calib.py 	\
-    --data_path /home/yunzhu/Documents/knit_calib/data \
+    --data_path ../data_sensing_correction/ \
     --knit_name vest_calibration\
     --superres 1.	\
     --resume 0		\
@@ -11,5 +11,5 @@ python calib.py 	\
     --scale_factor 1.0	\
     --debug 0		\
     --vis 0		\
-    --eval 1
+    --eval 0
 

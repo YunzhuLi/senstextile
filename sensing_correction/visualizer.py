@@ -3,7 +3,6 @@ import h5py
 import time
 import numpy as np
 
-import open3d as o3d
 import matplotlib
 # matplotlib.use('agg')
 import matplotlib.pyplot as plt
@@ -121,7 +120,7 @@ def R_2vect(R, vector_orig, vector_fin):
 
 class visualizer(object):
 
-    def __init__(self, sensor_type, side=None, root_dir='/home/yunzhu/Documents/knit_calib'):
+    def __init__(self, sensor_type, side=None, root_dir='../data_sensing_correction/'):
         '''
         sensor_type: glove
         side: left, right
@@ -138,7 +137,7 @@ class visualizer(object):
         sensor_type: kuka
         '''
 
-        vis_path_prefix = os.path.join(root_dir, 'data/visualization/')
+        vis_path_prefix = os.path.join(root_dir, 'visualization/')
 
         if sensor_type in ['glove', 'vest', 'kitchen_glove']:
             vis_outline_path = os.path.join(
@@ -484,6 +483,8 @@ class visualizer(object):
             self.mask = mask
 
     def init_vis_kuka(self, vis_sensor, vis_mesh_path):
+        import open3d as o3d
+
         '''
         kuka open3d setup
         '''

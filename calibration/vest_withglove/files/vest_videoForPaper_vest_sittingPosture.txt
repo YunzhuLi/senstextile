@@ -1,2 +1,0 @@
-videoForPaper/vest_sittingPosture/vest_back.hdf5
-videoForPaper/vest_sittingPosture/vest_back_pic.hdf5

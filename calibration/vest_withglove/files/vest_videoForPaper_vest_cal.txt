@@ -1,1 +1,0 @@
-videoForPaper/vest_calibration/vest_cal/touch_0.hdf5

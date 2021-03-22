@@ -1,3 +1,0 @@
-videoForPaper/vest_touching/vest_front_2.hdf5
-videoForPaper/vest_touching/vest_front.hdf5
-videoForPaper/vest_touching/vest_front_pic.hdf5

@@ -1,5 +1,5 @@
 # import open3d before torch to avoid conflicts
-from knit_calib.visualization.visualizer import visualizer
+from visualizer import visualizer
 
 import os
 import random

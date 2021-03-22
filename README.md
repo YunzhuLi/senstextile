@@ -19,11 +19,14 @@ This is a PyTorch-based implementation for self-supervised sensing correction, c
 ## Self-Supervised Sensing Correction
 
 #### Data and environment preparation
-1. You will need to download the data from the link: [[DropBox]](https://www.dropbox.com/s/vp5q6v85w14844v/data_classification.zip?dl=0) (451.2 MB)
+1. You will need to download the data from the link: [[DropBox]](https://www.dropbox.com/s/pf8cwj76w70kr6r/data_sensing_correction.zip?dl=0) (222.4 MB)
 2. Uncompress the data and place them according to the following structure
 ```
 sensing_correction/
 |--data_sensing_correction/
+|    |--glove_calibration/
+|    |--kuka_calibration/
+|    |--sock_calibration/
 |    |--vest_calibration/
 |    |--visualization/
 |--glove_withscale/
@@ -37,9 +40,33 @@ export PYTHONPATH=${PYTHONPATH}:${PWD}
 
 #### Calibrate the glove using the scale
 
+1. Generate demo visualizations using pretrained models
+```
+cd sensing_correction/glove_withscale
+bash scripts/eval.sh
+```
+Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/glove_withscale/dump_glove_calibration/vis*`.
+
+2. Training the calibration model for the glove using corresponding readings from the scale
+```
+cd sensing_correction/glove_withscale
+bash scripts/calib.sh
+```
 
 #### Calibrate the sock using the scale
 
+1. Generate demo visualizations using pretrained models
+```
+cd sensing_correction/sock_withscale
+bash scripts/eval.sh
+```
+Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/sock_withscale/dump_sock_calibration/vis*`.
+
+2. Training the calibration model for the sock using corresponding readings from the scale
+```
+cd sensing_correction/sock_withscale
+bash scripts/calib.sh
+```
 
 #### Calibrate the vest using a calibrated glove
 
@@ -123,73 +150,3 @@ cd classification/object_classification
 bash scripts/train_26obj.sh
 ```
 Results in the form of confusion matrix are stored in `classification/object_classification/dump*`.
-
-
-
-
-## Code organization
-
-Our code is consists of three sub-sections and organized as the following.
-
-### Self-supervised sensing correction
-```
-calibration
-|--glove_withscale
-|    |--scripts
-|    |    |--calib.sh
-|    |    |--eval.sh
-|    |--calib.py
-|    |--config.py
-|    |--data.py
-|    |--eval.py
-|--sock_withscale
-|--vest_withglove
-|--kuka_withglove
-|
-|--models.py
-|--utils.py
-|--visualizer.py
-```
-
-### Classification
-```
-classification
-|--letter_classification
-|    |--scripts
-|    |    |--train.sh
-|    |--config.py
-|    |--data.py
-|    |--models.py
-|    |--train.py
-|    |--utils.py
-|--object_classification
-|--sock_classification
-|--vest_classification
-|
-|--models.py
-|--utils.py
-```
-
-### Pose Prediction
-```
-Pose Prediction
-|--smpl
-|    |--verts.py
-|    |--serialization.py
-|    |--render_smpl.py
-|    |--posemapper.py
-|    |--lbs.py
-|    |--models
-|--chkpts
-|    |-model_in_paper
-|    |    |--checkpoint.pth.tar
-|--train.py
-|--models.py
-|--dataloader.py
-|--data_preprocessing.py
-|--test_visualize.py
-|--utils
-|    |--rotation_matrix.py
-|    |--transformations.py
-```
-

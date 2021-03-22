@@ -10,6 +10,12 @@ Tomás Palacios, Antonio Torralba, Wojciech Matusik
 
 This is a PyTorch-based implementation for self-supervised sensing correction, classification and human pose prediction in the paper "Learning human-environment interactions using conformal tactile textiles".
 
+## Contents
+
+- [Self-Supervised Sensing Correction](#self-supervised-sensing-correction)
+- [Human Pose Estimation](#human-pose-estimation)
+- [Classification](#classification)
+
 ## Self-Supervised Sensing Correction
 
 #### Data and environment preparation

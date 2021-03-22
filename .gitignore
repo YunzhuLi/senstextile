@@ -8,7 +8,7 @@ __pycache__
 
 *dump*
 
-classification/data/
+classification/data*/
 calibration/data/
 
 

@@ -7,7 +7,7 @@ import torch
 from torch.autograd import Variable
 from torch.utils.data import Dataset
 
-from knit_calib.utils.utils import synchronize_touch_and_touch
+from utils import synchronize_touch_and_touch
 
 
 class ActionDataset(Dataset):

@@ -1,0 +1,14 @@
+__pycache__
+.idea
+*.swp
+*.swo
+*.swn
+*.gz
+*.zip
+
+*dump*
+
+classification/data/
+calibration/data/
+
+

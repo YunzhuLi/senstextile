@@ -6,6 +6,34 @@ from sklearn.metrics import confusion_matrix
 from sklearn.utils.multiclass import unique_labels
 
 
+
+def synchronize_touch_and_touch(touch_0_seq, touch_1_seq, touch_0_ts, touch_1_ts, offset):
+    touch_0_idx = []
+    touch_1_idx = []
+    idx_0 = 0
+    idx_1 = 0
+    while touch_0_ts[idx_0] > touch_1_ts[idx_1]:
+        idx_1 += 1
+
+    for i in range(idx_1, len(touch_1_seq)):
+        flag = False
+        while touch_0_ts[idx_0] < touch_1_ts[i]:
+            idx_0 += 1
+            if idx_0 >= min(len(touch_0_seq), len(touch_0_seq) - offset):
+                flag = True
+                break
+        if flag:
+            break
+
+        touch_0_idx.append(idx_0 + offset)
+        touch_1_idx.append(i)
+
+    touch_0_idx = np.stack(touch_0_idx)
+    touch_1_idx = np.stack(touch_1_idx)
+
+    return touch_0_idx, touch_1_idx
+
+
 def accuracy(output, target, topk=(1,)):
     """Computes the accuracy over the k top predictions for the specified values of k"""
     with torch.no_grad():

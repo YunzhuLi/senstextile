@@ -28,21 +28,47 @@ This is a PyTorch-based implementation for self-supervised sensing correction, c
 
 ## Classification
 
-1. You will need to download the data from the link: [[DropBox]] (xx GB)
+#### Data preparation
+1. You will need to download the data from the link: [[DropBox]](https://www.dropbox.com/s/vp5q6v85w14844v/data_classification.zip?dl=0) (451.2 MB)
 2. Uncompress the data and place them according to the following structure
 ```
 classification/
-|--data/
+|--data_classification/
 |    |--glove_objclaassification_26obj/
 |    |--sock_classification/
 |    |--vest_classification/
 |    |--vest_letter/
+|--letter_classification/
+...
 ```
-Sock classification
+
+#### Letter classification using the vest
+```
+cd classification/letter_classification
+bash scripts/train.sh
+```
+Results in the form of confusion matrix are stored in `classification/letter_classification/dump*`.
+
+#### Action classification using the sock
 ```
 cd classification/sock_classification
 bash scripts/train.sh
 ```
+Results in the form of confusion matrix are stored in `classification/sock_classification/dump*`.
+
+#### Action classification using the vest
+```
+cd classification/vest_classification
+bash scripts/train.sh
+```
+Results in the form of confusion matrix are stored in `classification/vest_classification/dump*`.
+
+#### Object classification using the glove
+```
+cd classification/object_classification
+bash scripts/train_26obj.sh
+```
+Results in the form of confusion matrix are stored in `classification/object_classification/dump*`.
 
 
 

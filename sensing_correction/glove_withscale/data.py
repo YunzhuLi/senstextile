@@ -16,8 +16,8 @@ import torch.optim as optim
 from torch.autograd import Variable
 from torch.utils.data import Dataset, DataLoader
 
-from knit_calib.utils.utils import load_data_hdf5, filter_artifact_in_touch, filter_artifact_in_scale
-from knit_calib.utils.utils import clip_base_response, synchronize_touch_and_scale
+from utils import load_data_hdf5, filter_artifact_in_touch, filter_artifact_in_scale
+from utils import clip_base_response, synchronize_touch_and_scale
 
 
 def make_dataset_for_glove_calibration_withscale_touch_only(args, mask, touch_path, debug=0):

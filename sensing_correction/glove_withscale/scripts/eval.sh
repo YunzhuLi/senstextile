@@ -1,7 +1,7 @@
 CUDA_VISIBLE_DEVICES=0 \
 python eval.py          \
-    --data_path /home/yunzhu/Documents/knit_calib/data \
-    --knit_name glove_calibration_randompressing_withvision \
+    --data_path ../data_sensing_correction \
+    --knit_name glove_calibration \
     --superres 1.       \
     --resume 0          \
     --epoch -1          \
@@ -13,10 +13,5 @@ python eval.py          \
     --eval 1            \
     --vis 1             \
     --store 0           \
-    --eval_list files/glove_videoForPaper_kuka_calibration.txt \
-    # --eval_list files/glove_calibration_randompressing_withvision_pressing_shapes.txt \
-    # --eval_list files/glove_videoForPaper_vest_calibration.txt \
-    # --eval_list files/glove_videoForPaper.txt \
-    # --eval_list files/glove_videoForPaper_others_1.txt \
-    # --eval_list files/glove_calibration_randompressing_withvision.txt
-    # --eval_list files/glove_objclaassification_26obj.txt \
+    --eval_list files/glove_testing.txt \
+

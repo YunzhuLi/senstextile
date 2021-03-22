@@ -1,5 +1,5 @@
 # import open3d before torch to avoid conflicts
-from knit_calib.visualization.visualizer import visualizer
+from visualizer import visualizer
 
 import os
 import random
@@ -25,8 +25,8 @@ from sklearn.linear_model import LinearRegression
 from data import KnittedGloveDataset
 from config import gen_args
 
-from knit_calib.utils.utils import to_np, set_seed, get_lr
-from knit_calib.models.models import CNNCali
+from utils import to_np, set_seed, get_lr
+from models import CNNCali
 
 
 args = gen_args()
@@ -39,7 +39,7 @@ set_seed(42)
 '''
 visualizer
 '''
-if args.knit_name in ['glove_calibration_randompressing_withvision']:
+if args.knit_name in ['glove_calibration']:
     vis = visualizer(sensor_type='glove', side='right')
 
 

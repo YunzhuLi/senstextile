@@ -1,1 +1,0 @@
-glove_calibration_randompressing_withvision/pressing_shapes/touch.hdf5

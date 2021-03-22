@@ -45,7 +45,9 @@ export PYTHONPATH=${PYTHONPATH}:${PWD}
 cd sensing_correction/glove_withscale
 bash scripts/eval.sh
 ```
-Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/glove_withscale/dump_glove_calibration/vis*`.
+Visualizations showing the side-by-side comparison between the **raw signal (left)** and the **calibrated results (right)** are stored in `sensing_correction/glove_withscale/dump_glove_calibration/vis*`, and the following is a sample clip.
+
+![](imgs/correct_glove.gif)
 
 2. Training the calibration model for the glove using corresponding readings from the scale
 ```
@@ -60,7 +62,9 @@ bash scripts/calib.sh
 cd sensing_correction/sock_withscale
 bash scripts/eval.sh
 ```
-Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/sock_withscale/dump_sock_calibration/vis*`.
+Visualizations showing the side-by-side comparison between the **raw signal (left)** and the **calibrated results (right)** are stored in `sensing_correction/sock_withscale/dump_sock_calibration/vis*`, and the following is a sample clip.
+
+![](imgs/correct_sock.gif)
 
 2. Training the calibration model for the sock using corresponding readings from the scale
 ```
@@ -75,7 +79,9 @@ bash scripts/calib.sh
 cd sensing_correction/vest_withglove
 bash scripts/eval.sh
 ```
-Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/vest_withglove/dump_vest_calibration/vis*`.
+Visualizations showing the side-by-side comparison between the **raw signal (left)** and the **calibrated results (right)** are stored in `sensing_correction/vest_withglove/dump_vest_calibration/vis*`, and the following is a sample clip.
+
+![](imgs/correct_vest.gif)
 
 2. Training the calibration model for the vest using a pretrained calibrated glove
 ```
@@ -90,7 +96,9 @@ bash scripts/calib.sh
 cd sensing_correction/kuka_withglove
 bash scripts/eval.sh
 ```
-Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/kuka_withglove/dump_kuka_calibration/vis*`.
+Visualizations showing the side-by-side comparison between the **raw signal (left)** and the **calibrated results (right)** are stored in `sensing_correction/kuka_withglove/dump_kuka_calibration/vis*`, and the following is a sample clip.
+
+![](imgs/correct_kuka.gif)
 
 2. Training the calibration model for the kuka sleeve using a pretrained calibrated glove
 ```

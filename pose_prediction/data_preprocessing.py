@@ -112,4 +112,4 @@ for typ in file_typ:
         
     quat_joints[np.isnan(quat_joints)] = 0 
     to_save = [left_total[1:,:,:],right_total[1:,:,:],quat_joints[2:,:]]
-    pickle.dump(to_save, open( "/data/vision/torralba/communication/projects/glove/mocap/dataset/"+typ+".p", "wb" ) )    
+    pickle.dump(to_save, open( "dataset/"+typ+".p", "wb" ) )    

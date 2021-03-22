@@ -57,9 +57,6 @@ Pose Prediction
 |    |--posemapper.py
 |    |--lbs.py
 |    |--models
-|--chkpts
-|    |-model_in_paper
-|    |    |--checkpoint.pth.tar
 |--train.py
 |--models.py
 |--dataloader.py
@@ -70,3 +67,4 @@ Pose Prediction
 |    |--transformations.py
 ```
 
+Trained models, preprocessed datasets and results can be found [[here]](https://www.dropbox.com/sh/3teys3myb4owlub/AAAXgPYibbi57t9v9Ha4mN1ha?dl=0)

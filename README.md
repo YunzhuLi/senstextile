@@ -58,7 +58,18 @@ bash scripts/calib.sh
 
 #### Calibrate the kuka sleeve using a calibrated glove
 
+1. Generate demo visualizations using pretrained models. Note that you will have to install `Open3D 0.9.0` to visualize the kuka model in 3D.
+```
+cd sensing_correction/kuka_withglove
+bash scripts/eval.sh
+```
+Visualizations showing the side-by-side comparison between the raw signal and the calibrated results are stored in `sensing_correction/kuka_withglove/dump_kuka_calibration/vis*`.
 
+2. Training the calibration model for the kuka sleeve using a pretrained calibrated glove
+```
+cd sensing_correction/kuka_withglove
+bash scripts/calib.sh
+```
 
 
 ## Human Pose Estimation

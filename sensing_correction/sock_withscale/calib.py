@@ -1,5 +1,5 @@
 # import open3d before torch to avoid conflicts
-from knit_calib.visualization.visualizer import visualizer
+from visualizer import visualizer
 
 import os
 import random
@@ -25,8 +25,8 @@ from sklearn.linear_model import LinearRegression
 from data import KnittedGloveDataset
 from config import gen_args
 
-from knit_calib.utils.utils import to_np, set_seed, get_lr
-from knit_calib.models.models import CNNCali
+from utils import to_np, set_seed, get_lr
+from models import CNNCali
 
 
 args = gen_args()
@@ -39,7 +39,7 @@ set_seed(42)
 '''
 visualizer
 '''
-side = 'left' if 'left' in args.knit_name else 'right'
+side = 'left'
 vis = visualizer('sock', side)
 
 
@@ -278,10 +278,7 @@ for epoch in range(n_epoch):
             rects2 = ax.bar(x[1], cor_hand, width, color='limegreen', label='Manual')
             rects3 = ax.bar(x[2], cor_cal, width, color='orangered', label='Self-supervised')
             plt.xlim(-0.5, 2.5)
-            if 'left' in args.knit_name:
-                plt.ylim(0.85, 1.01)
-            elif 'right' in args.knit_name:
-                plt.ylim(0.70, 1.01)
+            plt.ylim(0.85, 1.01)
             plt.xticks([], [])
             ax.tick_params(labelsize=15)
             plt.legend(loc='upper left', fontsize=20)

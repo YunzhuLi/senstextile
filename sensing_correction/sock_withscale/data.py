@@ -16,8 +16,8 @@ import torch.optim as optim
 from torch.autograd import Variable
 from torch.utils.data import Dataset, DataLoader
 
-from knit_calib.utils.utils import load_data_hdf5, filter_artifact_in_touch, filter_artifact_in_scale
-from knit_calib.utils.utils import clip_base_response, synchronize_touch_and_scale
+from utils import load_data_hdf5, filter_artifact_in_touch, filter_artifact_in_scale
+from utils import clip_base_response, synchronize_touch_and_scale
 
 
 def make_dataset_for_sock_calibration_withscale_touch_only(args, mask, touch_path, debug=0):
@@ -48,13 +48,8 @@ def make_dataset_for_sock_calibration_withscale_touch_only(args, mask, touch_pat
     touch_rec = []
     touch_ts_rec = []
 
-    if 'left' in args.knit_name:
-        touch_mean = 7.9329
-        touch_std = 29.3390
-
-    elif 'right' in args.knit_name:
-        touch_mean = 6.1001
-        touch_std = 16.5276
+    touch_mean = 7.9329
+    touch_std = 29.3390
 
     for i in range(touch_seq.shape[0]):
         touch_st_idx = i - args.obs_window // 2
@@ -101,10 +96,7 @@ def make_dataset_for_sock_calibration_withscale(args, phase, data_path_prefix, m
     scale_seq = filter_artifact_in_scale(scale_raw, thresh=2.5e5)
 
     # synchronize touch and scale
-    if 'left' in args.knit_name:
-        offset = -1
-    elif 'right' in args.knit_name:
-        offset = 5
+    offset = -1
     touch_idx_per_round, scale_per_round = synchronize_touch_and_scale(
         touch_seq, scale_seq, touch_ts, scale_ts, offset=offset)
 
@@ -135,19 +127,11 @@ def make_dataset_for_sock_calibration_withscale(args, phase, data_path_prefix, m
     touch_rec = []
     scale_rec = []
 
-    if 'left' in args.knit_name:
-        touch_mean = 7.9329
-        touch_std = 29.3390
-        scale_mean = 593005.2296
-        scale_std = 286031.0056
-        scale_min = -0.9579
-
-    elif 'right' in args.knit_name:
-        touch_mean = 6.1001
-        touch_std = 16.5276
-        scale_mean = 685580.2034
-        scale_std = 300010.6740
-        scale_min = -1.3115
+    touch_mean = 7.9329
+    touch_std = 29.3390
+    scale_mean = 593005.2296
+    scale_std = 286031.0056
+    scale_min = -0.9579
 
 
     if phase == 'train':
@@ -190,10 +174,7 @@ class KnittedGloveDataset(Dataset):
         self.args = args
         self.phase = phase
 
-        if 'left' in args.knit_name:
-            data_list = ['rec_2019-12-18_15-18-17']
-        elif 'right' in args.knit_name:
-            data_list = ['rec_2019-12-26_10-15-13']
+        data_list = ['rec_2019-12-18_15-18-17']
 
         self.touch_raw_rec, self.touch_rec, self.scale_rec = [], [], []
 

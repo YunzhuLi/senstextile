@@ -1,4 +1,0 @@
-videoForPaper/sock_data/downstair_1/touch_left.hdf5
-videoForPaper/sock_data/tasks/touch_left.hdf5
-videoForPaper/sock_data/upstair_1/touch_left.hdf5
-videoForPaper/sock_data/upstair_2/touch_left.hdf5

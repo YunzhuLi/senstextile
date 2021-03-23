@@ -146,36 +146,47 @@ python train.py --exp name_of_expt
 python train.py --exp test --test  
 ```
 Squatting
+
 ![](imgs/squat.gif)
 
 Walking
+
 ![](imgs/walking.gif)
 
 Lunging
+
 ![](imgs/lunge.gif)
 
 Bending
+
 ![](imgs/bending.gif)
 
 Walking down the stairs
+
 ![](imgs/downstairs.gif)
 
 Lifting Leg
+
 ![](imgs/lift-leg.gif)
 
 Side Lunging
+
 ![](imgs/side-lunge.gif)
 
 Staanding on Toes
+
 ![](imgs/tiptoe.gif)
 
 Twisting
+
 ![](imgs/twist.gif)
 
 Walking side-ways
+
 ![](imgs/side-walk.gif)
 
 Walking up the stairs
+
 ![](imgs/upstairs.gif)
 
 

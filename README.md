@@ -147,7 +147,7 @@ python train.py --exp test --test
 ```
 Examples of some visualizations below:
 
-![](imgs/tactile2pose.gif)
+![](imgs/tactile2pose-compressed.gif)
 
 
 ## Classification

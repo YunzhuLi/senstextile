@@ -145,6 +145,8 @@ python train.py --exp name_of_expt
 ```
 python train.py --exp test --test  
 ```
+Examples of some visualizations below:
+
 Squatting
 
 ![](imgs/squat.gif)
@@ -161,10 +163,6 @@ Bending
 
 ![](imgs/bending.gif)
 
-Walking down the stairs
-
-![](imgs/downstairs.gif)
-
 Lifting Leg
 
 ![](imgs/lift-leg.gif)
@@ -172,18 +170,6 @@ Lifting Leg
 Side Lunging
 
 ![](imgs/side-lunge.gif)
-
-Staanding on Toes
-
-![](imgs/tiptoe.gif)
-
-Twisting
-
-![](imgs/twist.gif)
-
-Walking side-ways
-
-![](imgs/side-walk.gif)
 
 Walking up the stairs
 

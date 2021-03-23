@@ -108,12 +108,76 @@ bash scripts/calib.sh
 
 
 ## Human Pose Estimation
+We train a single model to predict all the joint angles of a human's body across the different action types and do not add any additional constraints for the predictions to look smooth over time.
+
+```
+Pose Prediction
+|--smpl
+|    |--verts.py
+|    |--serialization.py
+|    |--render_smpl.py
+|    |--posemapper.py
+|    |--lbs.py
+|    |--models
+|--train.py
+|--models.py
+|--dataloader.py
+|--data_preprocessing.py
+|--test_visualize.py
+|--utils
+|    |--rotation_matrix.py
+|    |--transformations.py
+...
+```
+
+Download the trained model, results and training data from the link: [[Dropbox]](https://www.dropbox.com/sh/gl5ukk6im1uj64r/AABTrd9qFqrLKOIwy8uU2vvSa?dl=0)
 
 #### Generate demos using pretrained weights
-
+```
+python test_visualize.py
+```
 #### Training
+```
+python train.py --exp name_of_expt  
+```
 
 #### Testing
+```
+python train.py --exp test --test  
+```
+Squatting
+![](imgs/squat.gif)
+
+Walking
+![](imgs/walking.gif)
+
+Lunging
+![](imgs/lunge.gif)
+
+Bending
+![](imgs/bending.gif)
+
+Walking down the stairs
+![](imgs/downstairs.gif)
+
+Lifting Leg
+![](imgs/lift-leg.gif)
+
+Side Lunging
+![](imgs/side-lunge.gif)
+
+Staanding on Toes
+![](imgs/tiptoe.gif)
+
+Twisting
+![](imgs/twist.gif)
+
+Walking side-ways
+![](imgs/side-walk.gif)
+
+Walking up the stairs
+![](imgs/upstairs.gif)
+
 
 ## Classification
 

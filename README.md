@@ -147,33 +147,7 @@ python train.py --exp test --test
 ```
 Examples of some visualizations below:
 
-Squatting
-
-![](imgs/squat.gif)
-
-Walking
-
-![](imgs/walking.gif)
-
-Lunging
-
-![](imgs/lunge.gif)
-
-Bending
-
-![](imgs/bending.gif)
-
-Lifting Leg
-
-![](imgs/lift-leg.gif)
-
-Side Lunging
-
-![](imgs/side-lunge.gif)
-
-Walking up the stairs
-
-![](imgs/upstairs.gif)
+![](imgs/tactile2pose.gif)
 
 
 ## Classification

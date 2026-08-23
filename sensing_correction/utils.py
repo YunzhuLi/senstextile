@@ -48,7 +48,7 @@ def load_data_hdf5(data_path, dict_name, max_length=-1):
     data_ts = np.array(data_f['ts'][:data_fc])
 
     ''' raw data '''
-    data = np.array(data_f[dict_name][:data_fc]).astype(np.float)
+    data = np.array(data_f[dict_name][:data_fc]).astype(float)
 
     return data, data_fc, data_ts
 

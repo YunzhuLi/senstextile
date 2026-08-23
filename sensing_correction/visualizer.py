@@ -206,8 +206,8 @@ class visualizer(object):
         for idx in range(0, len(vis_sensor), 4):
             x_gs = np.zeros(4)                  # x axis on glove visualization
             y_gs = np.zeros(4)                  # y axis on glove visualization
-            x_ss = np.zeros(4, dtype=np.int)    # x axis on sensor grid
-            y_ss = np.zeros(4, dtype=np.int)    # y axis on sensor grid
+            x_ss = np.zeros(4, dtype=int)    # x axis on sensor grid
+            y_ss = np.zeros(4, dtype=int)    # y axis on sensor grid
 
             idx_list = [idx, idx + 1, idx + 2, idx + 3]
             for ii, jj in enumerate(idx_list):
@@ -285,8 +285,8 @@ class visualizer(object):
         for idx in range(0, len(vis_sensor), 4):
             x_gs = np.zeros(4)                  # x axis on glove visualization
             y_gs = np.zeros(4)                  # y axis on glove visualization
-            x_ss = np.zeros(4, dtype=np.int)    # x axis on sensor grid
-            y_ss = np.zeros(4, dtype=np.int)    # y axis on sensor grid
+            x_ss = np.zeros(4, dtype=int)    # x axis on sensor grid
+            y_ss = np.zeros(4, dtype=int)    # y axis on sensor grid
 
             idx_list = [idx, idx + 1, idx + 2, idx + 3]
             for ii, jj in enumerate(idx_list):
@@ -358,8 +358,8 @@ class visualizer(object):
         for idx in range(0, len(vis_sensor), 4):
             x_gs = np.zeros(4)                  # x axis on glove visualization
             y_gs = np.zeros(4)                  # y axis on glove visualization
-            x_ss = np.zeros(4, dtype=np.int)    # x axis on sensor grid
-            y_ss = np.zeros(4, dtype=np.int)    # y axis on sensor grid
+            x_ss = np.zeros(4, dtype=int)    # x axis on sensor grid
+            y_ss = np.zeros(4, dtype=int)    # y axis on sensor grid
 
             idx_list = [idx, idx + 1, idx + 2, idx + 3]
             for ii, jj in enumerate(idx_list):
@@ -428,8 +428,8 @@ class visualizer(object):
         for idx in range(0, len(vis_sensor), 4):
             x_gs = np.zeros(4)                  # x axis on glove visualization
             y_gs = np.zeros(4)                  # y axis on glove visualization
-            x_ss = np.zeros(4, dtype=np.int)    # x axis on sensor grid
-            y_ss = np.zeros(4, dtype=np.int)    # y axis on sensor grid
+            x_ss = np.zeros(4, dtype=int)    # x axis on sensor grid
+            y_ss = np.zeros(4, dtype=int)    # y axis on sensor grid
 
             idx_list = [idx, idx + 1, idx + 2, idx + 3]
             for ii, jj in enumerate(idx_list):

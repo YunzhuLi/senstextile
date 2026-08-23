@@ -96,8 +96,8 @@ for epoch in range(args.n_epoch):  # loop over the dataset multiple times
 
             # record the prediction
             _, predicted = torch.max(outputs.data, 1)
-            pred_rec.append(predicted.data.cpu().numpy().astype(np.int))
-            true_rec.append(labels.data.cpu().numpy().astype(np.int))
+            pred_rec.append(predicted.data.cpu().numpy().astype(int))
+            true_rec.append(labels.data.cpu().numpy().astype(int))
 
             # record the topk accuracy
             top1, top3 = accuracy(outputs, labels, topk=(1, 3))
